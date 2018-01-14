@@ -22,6 +22,7 @@
 			</channel>
 			<channel id="shutter" typeId="shutter" />
 			<channel id="venetianBlind" typeId="venetianBlind" />
+			<channel id="venetianBlindEU" typeId="venetianBlindEU" />
 			<channel id="sunWindDetector" typeId="command">
 				<label>Sun+wind detector</label>
 				<description>Enable the sun+wind detector.</description>
