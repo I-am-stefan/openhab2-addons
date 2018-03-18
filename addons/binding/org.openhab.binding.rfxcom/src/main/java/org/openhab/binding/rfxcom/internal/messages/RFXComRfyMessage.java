@@ -194,7 +194,7 @@ public class RFXComRfyMessage extends RFXComDeviceMessageImpl<RFXComRfyMessage.S
                 }
                 break;
 
-            case CHANNEL_VENETIAN_BLIND:
+            case CHANNEL_VENETIAN_BLIND_EU:
                 if (type instanceof OpenClosedType) {
                     this.command = (type == OpenClosedType.CLOSED ? Commands.DOWN : Commands.UP);
                     
@@ -206,9 +206,6 @@ public class RFXComRfyMessage extends RFXComDeviceMessageImpl<RFXComRfyMessage.S
 
                 } else if (type instanceof OnOffType) {
                     this.command = (type == OnOffType.ON ? Commands.DOWN_SHORT : Commands.UP_SHORT);
-
-                } else if (type instanceof IncreaseDecreaseType) {
-                    this.command = (type == IncreaseDecreaseType.INCREASE ? Commands.DOWN_LONG : Commands.UP_LONG);
 
                 } else {
                     throw new RFXComUnsupportedChannelException("Can't convert " + type + " to Command");
