@@ -59,6 +59,7 @@ public class RFXComBindingConstants {
     public static final String CHANNEL_RAW_PAYLOAD = "rawPayload";
     public static final String CHANNEL_SHUTTER = "shutter";
     public static final String CHANNEL_VENETIAN_BLIND = "venetianBlind";
+    public static final String CHANNEL_VENETIAN_BLIND_EU = "venetianBlindEU";
     public static final String CHANNEL_SUN_WIND_DETECTOR = "sunWindDetector";
     public static final String CHANNEL_COMMAND = "command";
     public static final String CHANNEL_PROGRAM = "program";
