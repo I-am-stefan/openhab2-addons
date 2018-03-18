@@ -196,7 +196,13 @@ public class RFXComRfyMessage extends RFXComDeviceMessageImpl<RFXComRfyMessage.S
 
             case CHANNEL_VENETIAN_BLIND:
                 if (type instanceof OpenClosedType) {
-                    this.command = (type == OpenClosedType.CLOSED ? Commands.DOWN_SHORT : Commands.UP_SHORT);
+                    this.command = (type == OpenClosedType.CLOSED ? Commands.DOWN : Commands.UP);
+                    
+                } else if (type instanceof UpDownType) {
+                    this.command = (type == UpDownType.DOWN ? Commands.DOWN_LONG : Commands.UP_LONG);
+
+                } else if (type instanceof StopMoveType) {
+                    this.command = RFXComRfyMessage.Commands.STOP;
 
                 } else if (type instanceof OnOffType) {
                     this.command = (type == OnOffType.ON ? Commands.DOWN_SHORT : Commands.UP_SHORT);
